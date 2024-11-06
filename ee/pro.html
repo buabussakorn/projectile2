@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="projectile.js" defer></script> <!-- ลิงก์ไปยังไฟล์ projectile.js -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+</head>
+<body>
+
+    <div class="firstp">
+        <p>PROJECTILE</p>
+    </div>
+
+    <div class="projectile">
+        <h1>Projectile Motion</h1>
+        <p>การเคลื่อนที่แบบโพรเจกไทล์ หมายถึง การเคลื่อนที่ของวัตถุที่ประกอบด้วยการเคลื่อนที่ 2 แนวตั้งฉากกัน และเกิดขึ้นในเวลาเดียวกัน เช่น การขี่จักรยานผาดโผน เป็นเส้นทางโค้งจากเนินด้านหนึ่งไปยังเนินอีกด้านหนึ่ง การเคลื่อนที่ของวัตถุที่ถูกขว้างขึ้นไปในอากาศในแนวที่ทำมุม θ ใด ๆ  กับแนวราบด้วยอัตราเร็ว u การที่วัตถุมีความเร็วต้นถึงสองแนวเช่นนี้ ทำให้วัตถุมีการเคลื่อนที่ในแนวทั้งสองพร้อมกัน คือ การเคลื่อนที่ในแนวราบและการเคลื่อนที่ในแนวดิ่ง เมื่อรวมการเคลื่อนที่ทั้งสองนี้เข้าด้วยกัน แนวการเคลื่อนที่ของวัตถุที่ปรากฏจะเป็นวิถีโค้งในอากาศ</p>
+        <a href="https://www.scimath.org/lesson-physics/item/9414-2018-11-14-08-28-11" target="_blank">อ่านเพิ่มเติม</a>
+    </div>
+
+    <div class="grid-container">
+        <div class="container">
+            <div class="text">
+                <h2>การเคลื่อนที่แบบโพรเจคไทล์บนแกน x</h2>
+                <label for="velocity">ความเร็วเริ่มต้น (m/s): </label><br>
+                <input type="number" id="velocity" value="50" step="1" ><br><br>
+
+                <label for="angle">มุมเริ่มต้น (องศา): </label><br>
+                <input type="number" id="angle" value="45" step="1"><br><br>
+
+                <button onclick="plotGraph()" style="width:200px;height:40px;">calculate</button>
+                <p id="result">ผลลัพธ์จะแสดงที่นี่</p>
+            </div>
+            <div class="graph" id="graph"></div>
+        </div>
+
+       
+    </div>
+
+</body>
+
+</html>
